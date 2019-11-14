@@ -22,17 +22,17 @@ environment:
       platform: "x64"
 
 install:
-  - "C:\Python38\scripts\pip install -r requirements.txt"
-  - "C:\Python38\scripts\pip install twine codecov"
-  - "C:\Python38\python setup.py build_ext -i --compiler=mingw32"
+  - "C:/Python38/scripts/pip install -r requirements.txt"
+  - "C:/Python38/scripts/pip install twine codecov"
+  - "C:/Python38/python setup.py build_ext -i --compiler=mingw32"
 
 # Not a .NET project, we build in the install step instead
 build: false
 
 test_script:
-  - C:\Python38\scripts\pytest winpty --cov=winpty -v"
-  - C:\Python38\scripts\coveralls"
-  - C:\Python38\scripts\codecov"
+  - C:/Python38/scripts/pytest winpty --cov=winpty -v"
+  - C:/Python38/scripts/coveralls"
+  - C:/Python38/scripts/codecov"
 
 on_success:
   - powershell appveyor/publish.ps1"
